@@ -20,7 +20,7 @@ const mongodbSessionStore = require('connect-mongodb-session')(session);
 
 
 const store = new mongodbSessionStore({
-    uri: "mongodb+srv://Rafiudeen:fareen@cluster0.ruj5p.mongodb.net/Shop",
+    uri: "mongodb+srv://*********:**********@cluster.**********.mongodb.net/Shop",
     collection: 'sessions'
 })
 
@@ -37,7 +37,7 @@ app.use('/images',express.static(path.join(__dirname,'images')));
 
 //express-session
 app.use(
-  session({ secret: "secret", resave: false, saveUninitialized: false, store:store })
+  session({ secret: "**********", resave: false, saveUninitialized: false, store:store })
 );
 
 //csrf protection
@@ -90,5 +90,5 @@ app.get("/",Auth.logStatus);
 
 //mongoCOnnect
 mongoConnect(() => {
-  app.listen(2000);
+  app.listen();
 });
