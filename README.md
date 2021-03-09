@@ -2,7 +2,7 @@
 
 
            This app is a shopping app designed purely around node.js and express.js.
-This way, the business logic lies in the server; and th epages are rendered on the run.
+This way, the business logic lies in the server; and the pages are rendered on the go.
 
 
 Primary Tools used: 
