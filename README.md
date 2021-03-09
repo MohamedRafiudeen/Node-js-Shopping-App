@@ -22,12 +22,12 @@ Features:
     * CSRF protected pages.
     * Guarded routes.
     * Relations based MongoDB databses for optimal queries and data handling.
+    * CRUD operations over products.
 
 
 
 //present status: 
 =================
-* CRUD operations over products.
 * Mobile optimisation: (under development).
 * Responsive UI (under development).
 * Few pages being optimized for better performance.
