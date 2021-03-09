@@ -8,7 +8,7 @@ let _db;
 const mongoConnect = (cb) => { 
   mongoCLient
     .connect(
-      "mongodb+srv://Rafiudeen:fareen@cluster0.ruj5p.mongodb.net/Shop?retryWrites=true&w=majority",{ useUnifiedTopology: true }
+      "mongodb+srv://****:***********@cluster.*****.mongodb.net/Shop?retryWrites=true&w=majority",{ useUnifiedTopology: true }
     )
 
     .then((client) => {
