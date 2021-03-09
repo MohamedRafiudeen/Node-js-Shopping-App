@@ -13,7 +13,7 @@ const Transporter = require("nodemailer").createTransport(
   sendGrid({
     auth: {
       api_key:
-        "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",
+        "**********",
     },
   })
 );
