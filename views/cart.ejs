@@ -1,0 +1,38 @@
+<%- include('./includes/head.ejs') %>
+
+<body>
+    
+    <%- include('./includes/navbar.ejs') %>
+
+    <h1><%= title %></h1>
+
+    
+    <div class="cartContainer">
+        <h4><%= products.length %> products in your cart.</h4>
+        <% for(let product of products) { %>
+      <form action="">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <input type="hidden" value="product._id">
+                <img class="img" src="<%= product.pImg %>" alt="<%= product.name %>">
+
+                <div class="pName">
+                <h4><%= product.pName %></h4>
+                </div>
+                <div>
+                    <h5>Rs. <%= product.pPrice %></h5>
+                </div>
+
+                <div class="qty">
+                    <label>qty:</label>
+                    <input type="number" value="<% product.qty? product.qty : 1 %>"/>
+                </div>
+            </li>
+        </ul>
+
+        <% } %>
+
+        <button type="submit" class="btn btn-tertiary btn-lg mt-4">Checkout</button>
+    </form>
+    </div>
+</body>

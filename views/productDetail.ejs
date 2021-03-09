@@ -1,0 +1,22 @@
+
+
+<body>
+    <h1><%= title %></h1>
+
+    <div class="container" style="position: relative;margin: 5% auto;display: flex;flex-wrap: wrap;">
+
+    <% for(let product of products) { %>
+
+    <div class="card">
+        <h2 class="card-title"><%= product.pName %></h2>
+
+        <img src=" <%= product.imgSrc %>" alt="">
+
+        <p class="card-desc"><%= product.pDesc %></p>
+    </div>
+
+    <% } %>
+
+    </div>
+
+</body>

@@ -1,0 +1,63 @@
+body{
+    background-color: lightseagreen;
+}
+
+.navbar{
+    background-color: rgb(190, 113, 12);
+    max-height: 50px;
+}
+
+.nav-link,.navbar-brand{
+    color: white;
+}
+
+
+li{
+    display: inline-block;
+}
+
+h1{
+    color: white;
+}
+
+.card{
+    max-width: 30% auto;
+    max-height: 30vw auto;
+}
+
+
+/*cart page*/
+
+.cartContainer{
+    width: 50%;
+    margin: 0px auto;
+}
+
+.list-group{
+    margin: 2% 0px;
+}
+
+.list-group-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0.5% 0px;
+}
+
+
+
+.img{
+    height: 60px;
+    width: 60px;
+}
+
+.pName{
+    width: 40%;
+}
+
+input{
+    width: 50px;
+    
+}
+
+/*end- cart page*/

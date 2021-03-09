@@ -1,0 +1,23 @@
+.card{
+    min-height: 10%;
+    margin:3%
+}
+
+.page{
+    display: flex;
+    justify-content: center;
+}
+
+.page > a{
+    color: lightseagreen;
+    text-decoration: none;
+    background-color: beige;
+    padding: 0.5vw;
+    margin: 1% 1%;
+}
+
+.page > a:hover{
+    background-color: lightseagreen;
+    color: white;
+    border: 1px solid white;
+}

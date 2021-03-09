@@ -1,0 +1,31 @@
+<%- include('./includes/head') %>
+<body>
+
+    <%- include('./includes/navbar.ejs') %>
+
+    <div class="container" style="position: relative;margin: 5% auto;max-width: 30%;">
+    <h1>sign In Page</h1>
+
+    <% if(err) { %>
+    <p class="btn btn-danger"><%= err %></p>
+    <% } %>
+
+    <form action="/signIn" method="POST">
+
+        <input type="hidden" name="_csrf" value="<%=csrfToken %>">
+
+        <div class="form-group">
+            <label for="#pEmail">email: </label>
+            <input  type="email" name="uEmail" id="uEmail" class="form-control"></input>
+        </div>
+
+        <div class="form-group">
+            <label for="#pPassword">Password:</label>
+            <input type="password"  name="uPassword" id="uPassword" class="form-control">
+        </div>
+
+        <button type="submit" class="btn btn-<% if(editing) { %>success<% } else { %>primary <% } %>"><% if(editing) { %> Update <% } else { %> Sign In..! <% } %></button>
+    </form>
+    </div>
+</body>
+</html>

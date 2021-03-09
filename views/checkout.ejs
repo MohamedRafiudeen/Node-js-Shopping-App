@@ -1,0 +1,27 @@
+
+
+<body>
+
+    <h1>Cart Page</h1>
+
+    <div class="container">
+
+        <% for(let product of products) { %>
+        <ul>
+            <li class="list">
+                <h2><%= product.pName %></h2>
+                <img src="<%= product.imgSrc %>" alt="<%= product.title %>">
+                <h2><%= product.pDesc %></h2>
+
+
+                <form action="'/updateQty/:<%= product.id %>'"></form>
+                <label for="qty">qty:</label>
+                <input name="qty" type="number" value=" <%= product.qty %>"></input>
+            </li>
+        </ul>
+
+        <% } %>
+
+        <h2>Total Price: <%= totalPrice %></h2>
+    </div>
+</body>

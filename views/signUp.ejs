@@ -1,0 +1,43 @@
+<%- include('./includes/head') %>
+
+
+<body>
+
+    <%- include('./includes/navbar.ejs') %>
+
+  <div class="container" style="position: relative;margin: 5% auto;max-width: 30%;">
+
+    <h1>SignUp Page</h1>
+
+    <% if(err) { %>
+        <p class="btn btn-danger"><%= err %></p>
+    <% } %>
+
+    <form action="/signUp" method="POST" >
+        <div class="form-group">
+            <label for="uName">Name:</label>
+            <input type="text" value="<% if(editing) { %> <%= prod.pName %> <% } else{ %>  <% } %>" name="uName" id="uName" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="#uEmail">email: </label>
+            <input  type="email" value="<% if(editing) { %> <%= prod.pDesc %> <% } else{ %>  <% } %>" name="uEmail" id="uEmail" class="form-control"></input>
+        </div>
+
+        <div class="form-group">
+            <label for="#uPassword">Password:</label>
+            <input type="password" value="" name="uPassword" id="uPassword" class="form-control">
+        </div>
+
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+
+        <div class="form-group">
+            <label for="#uConfirmPassword">Confirm Password:</label>
+            <input type="password" value="" name="uConfirmPassword" id="uConfirmPassword" class="form-control">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Sign Up..!</button>
+    </form>
+  </div>
+</body>
+</html>
